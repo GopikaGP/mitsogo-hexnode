@@ -1,0 +1,46 @@
+*{
+    font-family: "Mulish", sans-serif;
+}
+
+.navbar_bg {
+  background-color: rgb(7, 8, 29);
+  transition: 1s;
+}
+
+.navbar-scrolled {
+  background-color: white !important;
+  color: black !important;
+  transition: 1s;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+  color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.btn-danger {
+  border-radius: 3px !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  background-color: #dd0735 !important;
+  padding: 10px 26px !important;
+}
+.navbar_bg:hover {
+  background-color: white;
+  color: black ; 
+  transition:  1s;
+}
+.navbar_bg:hover .nav-link {
+  color: black !important;
+}
+.navbar_bg:hover .navbar-brand {
+  color: black !important;
+}
