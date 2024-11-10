@@ -48,7 +48,7 @@
 /* Positioning */
 .lady_image {
     position: absolute;
-    top: 8%;
+    top: 7%;
     left: 52.4%;
     overflow-x: hidden;
     z-index: 11;
@@ -206,43 +206,6 @@
 }
 
 
-/* 
-/* START */
-
-/* @keyframes dashed-border {
-  0% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, #e5e7eb 25%, transparent 25%);
-  }
-  100% {
-    border-image-slice: 1;
-    border-image-source: linear-gradient(90deg, transparent 25%, #e5e7eb 25%);
-  }
-}
-
-.left_top, .right_top, .left_bottom, .right_bottom {
-  width: 177px;
-  height: 134.928px;
-  border-style: dashed;
-  border-width: 5px;
-  border-color: #e5e7eb;
-  border-radius: 35px;
-  animation: dashed-border 2s linear infinite;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-/* END */
-*/
 
 /* SECTION3  */
 .section_3{
@@ -297,7 +260,7 @@
 
  
 }
-.left_bottom{
+/* .left_bottom{
   width: 177px;
   height: 134.928px;
   border-bottom:5px dashed rgba(0, 0, 0, 0.46) ;
@@ -307,8 +270,8 @@
   left: 53%;
   bottom: 20%;
   display: block;
-}
-.right_bottom{
+} */
+/* .right_bottom{
   width: 177px;
   height: 134.928px;
   border-bottom:5px dashed rgba(0, 0, 0, 0.46) ;
@@ -318,8 +281,8 @@
   right: 52%;
   bottom: 20%;
   display: block;
-}
-.right_top{
+} */
+/* .right_top{
   width: 177px;
   height: 134.928px;
   border-top:5px dashed rgba(0, 0, 0, 0.46) ;
@@ -329,18 +292,130 @@
   right: 52%;
   top: 33%;
   display: block;
-}
-.left_top{
+} */
+
+.left_top {
   width: 177px;
   height: 134.928px;
-  border-top:5px dashed rgba(0, 0, 0, 0.46) ;
-  border-left: 5px dashed rgba(0, 0, 0, 0.46);
-  border-radius: 35px;
+ 
+  border-radius: 15px;
   position: absolute;
   left: 52%;
   top: 33%;
   display: block;
+  background: 
+    linear-gradient(90deg, rgb(18, 18, 19) 50%, transparent 50%), /* For the top border */
+    linear-gradient(0deg, rgb(15, 15, 16) 50%, transparent 50%);   /* For the left border */
+  background-repeat: repeat-x, repeat-y;
+  background-size: 15px 4px, 4px 15px;
+  background-position: 0px 0px, 0px 0px;
+  padding: 10px;
+  animation: border-dance 4s infinite linear;
 }
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 300px 0px, 0px 150px;
+  }
+}
+.right_top {
+  width: 177px;
+  height: 134.928px;
+  border-radius: 15px;
+  position: absolute;
+  right: 52%;  /* Adjust position as needed */
+  top: 33%;    /* Adjust position as needed */
+  display: block;
+  padding: 10px;
+  
+  background: 
+    linear-gradient(90deg, black 50%, transparent 50%), /* For top border */
+    linear-gradient(0deg, black 50%, transparent 50%);  /* For right border */
+  
+  background-repeat: repeat-x, repeat-y;
+  background-size: 15px 5px, 5px 15px;  /* Set size for top and right border */
+  background-position: 0px 0px, 100% 100%; /* Start right border from bottom-right corner */
+  
+  animation: border-dance-2 4s infinite linear;
+}
+
+@keyframes border-dance-2 {
+  0% {
+    background-position: 0px 0px, 100% 100%;  /* Top at 0, right at bottom-right */
+  }
+  100% {
+    background-position: 300px 0px, 100% 0%;  /* Top moves horizontally, right moves upward */
+  }
+}
+
+.right_bottom {
+  width: 177px;
+  height: 134.928px;
+  position: absolute;
+  right: 52%;
+  bottom: 20%;
+  border-radius: 15px;
+  display: block;
+  padding: 10px;
+  
+  background: 
+    linear-gradient(90deg, black 50%, transparent 50%), /* Bottom border */
+    linear-gradient(0deg, black 50%, transparent 50%);  /* Right border */
+  
+  background-repeat: repeat-x, repeat-y;
+  background-size: 15px 5px, 5px 15px;  /* Set size for bottom and right borders */
+  background-position: 0px 100%, 100% 100%; /* Start bottom border from left and right border from bottom-right */
+  
+  animation: border-dance-3 4s infinite linear;
+}
+
+@keyframes border-dance-3 {
+  0% {
+    background-position: 0px 100%, 100% 100%;  /* Start bottom from left, right from bottom-right */
+  }
+  100% {
+    background-position: 300px 100%, 100% 0%;  /* Bottom border moves horizontally, right border moves upwards */
+  }
+}
+
+.left_bottom {
+  width: 177px;
+  height: 134.928px;
+  position: absolute;
+  left: 53%;
+  bottom: 20%;
+  border-radius: 15px;
+  display: block;
+  padding: 10px;
+  
+  background: 
+    linear-gradient(90deg, black 50%, transparent 50%), /* Bottom border */
+    linear-gradient(180deg, black 50%, transparent 50%);  /* Left border (changed from right to left) */
+  
+  background-repeat: repeat-x, repeat-y;
+  background-size: 15px 5px, 5px 15px;  /* Set size for bottom and left borders */
+  background-position: 0px 100%, 0px 100%; /* Start bottom border from left and left border from bottom-left */
+  
+  animation: border-dance-4 4s infinite linear;
+}
+
+@keyframes border-dance-4 {
+  0% {
+    background-position: 0px 100%, 0px 100%;  /* Start bottom from left, left from bottom-left */
+  }
+  100% {
+    background-position: 300px 100%, 0px 0%;  /* Bottom border moves horizontally, left border moves upwards */
+  }
+}
+
+
+
+
+
+
 
 /* SECTION4 */
 .container_custom{
@@ -616,7 +691,7 @@
   }
   .lady_image {
     position: absolute;
-    top: 18%;
+    top: 7%;
     left:0% !important;
     overflow-x: hidden;
     z-index: 11;
@@ -658,7 +733,7 @@
 }
 .badge-success{
  
-  bottom: 46%;
+  bottom:60%;
  
 
 }
@@ -753,6 +828,10 @@
 
   
 }
+/* 
+
+*/
+
 
 @media (min-width: 481px) and (max-width:768px) {
   .main_section1_flex{
@@ -773,7 +852,7 @@
   }
   .lady_image {
     position: absolute;
-    top: 8%;
+    top: 7%;
     left:0% !important;
     overflow-x: hidden;
     z-index: 11;
@@ -940,7 +1019,7 @@
   }
   .lady_image {
     position: absolute;
-    top: 8%;
+    top: 0%;
     left:0% !important;
     overflow-x: hidden;
     z-index: 11;
@@ -950,23 +1029,23 @@
 .badge-text{
    
  
-   padding: 4px 8px;
+   padding: 8px 16px;
  
-   font-size: 8px;
+   font-size: 17px;
    
 }
    
 .badge-warning{
  
-  top: 21%;
+  top: 15%;
   right: 53%;
  
 }
 .badge-info{
  
-  top: 28%;
- right:5.4%;
-  z-index: 11;
+  top: 25%;
+ right:-7%;
+  z-index: 1;
  
 
  
@@ -974,7 +1053,7 @@
 }
 .badge-success{
  
-  bottom: 46%;
+  bottom: 50%;
  
 
 }
@@ -1165,4 +1244,11 @@
 } */
 .bottom-line.active .bottom-line{
   border: none;
+}
+@media (min-width: 1280px) and (max-width: 1280px) {
+
+  .lady_image{
+    top: 7%;
+    left: 45.4%;
+  }
 }
