@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -14,3 +15,7 @@ Custom CSS Overrides and Styling and rsponsive in banner section
 Challenge: When overriding default Bootstrap styles, it’s easy to lose track of the customizations, which can cause confusion later.
 Solution: In your documentation, create a Custom Styles section where you list all custom CSS classes (e.g., .navbar_bg, .btn-danger). Explain why these were added or modified and include specific values for properties like color, padding, and margins.
 
+=======
+# mitsogo-hexnode
+Assesment: technologies used react,js HTML,Css ,bootstrap
+>>>>>>> d5ad17eba09143f1a4f2230f1c033b71c31c39a8
